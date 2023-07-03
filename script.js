@@ -1,4 +1,4 @@
-document.body.innerHTML="<!DOCTYPE HTML>
+document.body.innerHTML="
 <html>
 
 <head>
