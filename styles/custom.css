@@ -87,7 +87,25 @@ body {
     object-fit: cover;
 }
 
-.social-icons img {
-    width: 32px;
-    margin: 0 5px;
+
+/* iframe {
+    width: 350px;
+    height: 120px;
+    border: none;
+} */
+
+.thm-badge {
+    width: 250px;          /* final visible width */
+    height: 85px;          /* final visible height */
+    overflow: hidden;      
+    border-radius: 10px;
+}
+
+.thm-badge iframe {
+    width: 350px;          /* original badge width */
+    height: 120px;         /* original badge height */
+    border: none;
+
+    transform: scale(0.72);   /* scale down */
+    transform-origin: top left; 
 }
