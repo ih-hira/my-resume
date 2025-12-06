@@ -60,9 +60,9 @@
     <script>
         async function loadPage() {
             const route = location.hash.replace("#", "") || "home";
-            let html = await fetch(`/pages/home.html`).then(r => r.text());
+            let html = await fetch(`pages/home.html`).then(r => r.text());
             if (route == "certifications" || route == "skills") {
-                html = await fetch(`/pages/${route}.html`).then(r => r.text());
+                html = await fetch(`pages/${route}.html`).then(r => r.text());
             }
             document.getElementById("app").innerHTML = html;
         }
