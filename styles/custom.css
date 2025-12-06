@@ -109,3 +109,11 @@ body {
     transform: scale(0.72);   /* scale down */
     transform-origin: top left; 
 }
+
+#certifications img {
+    transition: transform 0.25s ease;
+}
+
+#certifications img:hover {
+    transform: scale(1.05);
+}
