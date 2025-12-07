@@ -17,6 +17,18 @@ body {
 .navbar-nav .nav-link {
     font-size: 16px;
 }
+.navbar-black {
+    background-color: #000 !important;
+}
+
+.navbar-black .nav-link,
+.navbar-black .navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-black .nav-link:hover {
+    color: #bbbbbb !important;
+}
 
 .carousel-item img {
     width: 100%;
@@ -33,7 +45,7 @@ header h4 {
 }
 
 body {
-    background-color: #eeeeee;
+    background-color: #f5f7fa;
 }
 
 .skills-section {
@@ -117,3 +129,5 @@ body {
 #certifications img:hover {
     transform: scale(1.05);
 }
+
+

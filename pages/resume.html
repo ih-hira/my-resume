@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Md. Imtiyaz Hossain</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="icon" href="../images/img.jpg" type="image/jpg" sizes="16x16" />
+    <link rel="stylesheet" href="../styles/custom.css" />
+  </head>
+
+  <body>
+    <!-- <header class="text-center py-4">
+        <div class="container d-flex flex-column align-items-center">
+            <img src="../images/img.jpg" class="profile-img mb-2" alt="Profile Picture">
+            <h2>Md. Imtiyaz Hossain</h2>
+            <h4>Software Engineer | Cyber Security Professional</h4>
+            <div class="social-icons">
+                <a href="mailto:imtiyaz.aust@gmail.com"><img
+                        src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png"
+                        alt="Gmail"></a>
+                <a href="https://www.linkedin.com/in/ihhira" target="_blank"><img
+                        src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/56-linkedin-512.png"
+                        alt="LinkedIn"></a>
+                <a href="https://github.com/ih-hira" target="_blank"><img
+                        src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/142_Github_logo_logos-512.png"
+                        alt="GitHub"></a>
+            </div>
+        </div>
+    </header> -->
+
+    <nav class="navbar navbar-expand-lg navbar-black sticky-top">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <!-- <li class="nav-item"><a class="nav-link" href="#summary">Summary</a></li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="#education">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">Work Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#certifications">Certifications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#achievements">Achievements</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="app"></div>
+
+    <!-- <footer class="bg-dark text-white text-center py-4 mt-5" id="contact">
+        <p>Contact: <a href="mailto:ih_hira@outlook.com" class="text-white">ih_hira@outlook.com</a></p>
+        <p>Dhaka, Bangladesh | +8801682371979</p>
+    </footer> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      async function loadPage() {
+        const route = location.hash.replace("#", "") || "education";
+
+        let html = await fetch(`${route}.html`).then((r) => r.text());
+
+        document.getElementById("app").innerHTML = html;
+      }
+
+      window.addEventListener("hashchange", loadPage);
+      window.addEventListener("load", loadPage);
+    </script>
+  </body>
+</html>
