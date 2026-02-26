@@ -1,71 +1,110 @@
-<style>
-.section-title {
-    font-size: 28px;
-    margin-bottom: 30px;
-}
-
-.achievement-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-}
-
-.achievement-card {
-    background: #ffffff;
-    width: 260px;
-    padding: 25px;
-    border-radius: 16px;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-    transition: 0.3s ease;
-}
-
-.achievement-card:hover {
-    transform: translateY(-5px);
-}
-
-</style>
-<section id="achievements" class="container my-5">
+<section id="achievements" class="container-lg">
   
-  <div class="achievements-container">
+  <!-- Problem Solving Section -->
+  <div class="mb-5">
+    <div class="section-header mb-5">
+      <h2 class="display-5 fw-bold mb-2"><i class="fas fa-puzzle-piece text-primary me-3"></i>Problem Solving</h2>
+      <div class="header-line"></div>
+    </div>
 
-    <h3 class="section-title mb-4">Problem Solving</h2>
-
-    <div class="achievement-section">
-
-      <div class="achievement-card">
-        <h3>LeetCode</h3>
-        <a href="https://leetcode.com/u/ih_hira" class="view-link">View Profile →</a>
-      </div>
-      <div class="achievement-card">
-        <h3>HackerRank</h3>
-        <a href="https://www.hackerrank.com/profile/ih_hira" class="view-link">View Profile →</a>
-      </div>
-      <div class="achievement-card">
-        <h3>UVA Judge</h3>
-        <a href="https://uhunt.onlinejudge.org/id/701950" class="view-link">View Profile →</a>
-      </div>
-      <div class="achievement-card">
-        <h3>Codeforces</h3>
-        <a href="https://codeforces.com/profile/ih_hira" class="view-link">View Profile →</a>
+    <div class="row g-4">
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="https://leetcode.com/u/ih_hira" target="_blank" class="achievement-card text-decoration-none">
+          <div class="achievement-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h5 class="mt-3 mb-2">LeetCode</h5>
+          <p class="text-muted small mb-0">Algorithm Problems</p>
+          <span class="badge bg-primary mt-2">View Profile →</span>
+        </a>
       </div>
 
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="https://www.hackerrank.com/profile/ih_hira" target="_blank" class="achievement-card text-decoration-none">
+          <div class="achievement-icon">
+            <i class="fas fa-ranking-star"></i>
+          </div>
+          <h5 class="mt-3 mb-2">HackerRank</h5>
+          <p class="text-muted small mb-0">Competitive Programming</p>
+          <span class="badge bg-primary mt-2">View Profile →</span>
+        </a>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="https://uhunt.onlinejudge.org/id/701950" target="_blank" class="achievement-card text-decoration-none">
+          <div class="achievement-icon">
+            <i class="fas fa-gavel"></i>
+          </div>
+          <h5 class="mt-3 mb-2">UVA Judge</h5>
+          <p class="text-muted small mb-0">Online Judge Problems</p>
+          <span class="badge bg-primary mt-2">View Profile →</span>
+        </a>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="https://codeforces.com/profile/ih_hira" target="_blank" class="achievement-card text-decoration-none">
+          <div class="achievement-icon">
+            <i class="fas fa-fire"></i>
+          </div>
+          <h5 class="mt-3 mb-2">Codeforces</h5>
+          <p class="text-muted small mb-0">Algorithm Contests</p>
+          <span class="badge bg-primary mt-2">View Profile →</span>
+        </a>
+      </div>
     </div>
   </div>
 
-  <div class="achievements-container mt-5">
+  <!-- Ethical Hacking Section -->
+  <div>
+    <div class="section-header mb-5">
+      <h2 class="display-5 fw-bold mb-2"><i class="fas fa-user-secret text-primary me-3"></i>Ethical Hacking</h2>
+      <div class="header-line"></div>
+    </div>
 
-    <h3 class="section-title mb-4">Ethical Hacking</h2>
-
-    <div class="achievement-section">
-
-      <div class="achievement-card">
-        <h3>TryHackMe</h3>
-        <a href="https://tryhackme.com/p/Cyb3rSapi3ns" class="view-link">View Profile →</a>
+    <div class="row g-4">
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="https://tryhackme.com/p/Cyb3rSapi3ns" target="_blank" class="achievement-card text-decoration-none">
+          <div class="achievement-icon">
+            <i class="fas fa-terminal"></i>
+          </div>
+          <h5 class="mt-3 mb-2">TryHackMe</h5>
+          <p class="text-muted small mb-0">Cybersecurity Training</p>
+          <span class="badge bg-primary mt-2">View Profile →</span>
+        </a>
       </div>
-     
-
     </div>
   </div>
 
 </section>
 
+<style>
+.achievement-card {
+  display: block;
+  padding: 2rem 1.5rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  background: white;
+  h5 {
+    color: #333;
+    font-weight: 600;
+  }
+}
+
+.achievement-card:hover {
+  border-color: #0d6efd;
+  box-shadow: 0 8px 20px rgba(13, 110, 253, 0.15);
+  transform: translateY(-5px);
+}
+
+.achievement-icon {
+  font-size: 3rem;
+  color: #0d6efd;
+}
+
+.achievement-card .badge {
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+}
+</style>
