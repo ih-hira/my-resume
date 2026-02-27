@@ -22,6 +22,11 @@ body {
     line-height: 1.6;
 }
 
+/* Bootstrap Override - Text Muted */
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
 /* Hero Section */
 .hero-section {
     background: linear-gradient(135deg, var(--bg-color) 0%, var(--surface-color) 100%);
@@ -352,6 +357,8 @@ body {
 .social-links {
     display: flex;
     gap: 1.5rem;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
 }
 
 .social-icon {
@@ -407,15 +414,52 @@ body {
     transform: translateY(-2px);
 }
 
+/* Body & HTML Structure for Sticky Footer */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
 /* Footer */
 footer {
     background: linear-gradient(135deg, var(--bg-color) 0%, var(--surface-color) 100%) !important;
     border-top: 1px solid var(--divider-color);
-    margin-top: 5rem;
+    margin-top: auto;
+    padding: 2rem 1rem !important;
+}
+
+footer .container-lg {
+    max-width: 1200px;
 }
 
 footer p {
     margin: 0;
+    padding: 0.25rem 0;
+}
+
+footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 1.5rem 1rem !important;
+    }
+    
+    footer p {
+        font-size: 0.9rem;
+    }
 }
 
 /* Utilities */
@@ -448,6 +492,8 @@ footer p {
 
     .social-links {
         justify-content: flex-start;
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
     }
 
     .btn-primary, .btn-outline-primary {
