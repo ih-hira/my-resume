@@ -103,14 +103,35 @@
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
       
+      // Function to set active nav link based on current hash
+      function setActiveNavLink() {
+        const currentRoute = location.hash.replace("#", "") || "education";
+        const navLinks = document.querySelectorAll('a.nav-link');
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          const href = link.getAttribute('href');
+          if (href && href.includes(currentRoute)) {
+            link.classList.add('active');
+          }
+        });
+      }
+      
       async function loadPage() {
         const route = location.hash.replace("#", "") || "education";
         let html = await fetch(`${route}.html`).then((r) => r.text());
         document.getElementById("app").innerHTML = html;
+        setActiveNavLink();
       }
 
-      window.addEventListener("hashchange", loadPage);
-      window.addEventListener("load", loadPage);
+      window.addEventListener("hashchange", () => {
+        loadPage();
+        setActiveNavLink();
+      });
+      window.addEventListener("load", () => {
+        loadPage();
+        setActiveNavLink();
+      });
     </script>
   </body>
 </html>
